@@ -52,11 +52,9 @@ body {
 }
 
 .container {
-  width: 1158px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  max-width: 1158px;
+  padding: 0 15px;
+  margin-left: 0 auto;
 }
 
 .list {
@@ -68,6 +66,8 @@ body {
 }
 
 .section-title {
+  margin-bottom: 72px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -78,6 +78,9 @@ body {
 }
 
 .title {
+  margin-bottom: 8px;
+  text-align: center;
+
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -101,7 +104,29 @@ body {
 
 /* header */
 
+.page-header-container {
+  display: flex;
+  align-items: center;
+}
+
+.page-nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
+  padding: 24px 0;
+
   font-family: var(--font-secondary);
   font-weight: 800;
   font-size: 18px;
@@ -112,6 +137,7 @@ body {
 }
 
 .logo-header {
+  margin-right: 76px;
   color: var(--navy-blue);
 }
 
@@ -126,8 +152,14 @@ body {
   color: var(--ocean);
 }
 
+.menu-item:not(:last-child) {
+  margin-right: 40px;
+}
+
 .address {
   font-style: normal;
+  display: flex;
+  margin-left: auto;
 }
 .contact-list,
 .contact-list {
@@ -142,6 +174,10 @@ body {
   color: var(--ocean);
 }
 
+.contact-item:not(:last-child) {
+  margin-right: 40px;
+}
+
 /* hero */
 
 .hero {
@@ -149,6 +185,9 @@ body {
 }
 
 .hero-title {
+  width: 496px;
+  height: 120px;
+
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
@@ -158,6 +197,11 @@ body {
 }
 
 .hero-button {
+  /* align-items: center; */
+  min-width: 160px;
+  padding: 16px 32px;
+  border-radius: 4px;
+
   font-family: inherit;
   font-size: 16px;
   font-weight: 500;
@@ -192,10 +236,18 @@ body {
 /* our team */
 
 .section-bg {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
   background-color: var(--cloud);
 }
 
 .team-list {
+  display: flex;
+  
+  align-items: center;
+  border-radius: 0px 0px 4px 4px;
+
   background-color: var(--white);
 }
 
@@ -203,7 +255,13 @@ body {
   background-color: var(--white);
 }
 
+.team-bg:not(:nth-child(4n)) {
+  margin-right: 24px;
+}
+
 .prof-name {
+  text-align: center;
+
   font-weight: 400;
   line-height: calc(24 / 16);
 }
