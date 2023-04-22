@@ -28,19 +28,15 @@ h2,
 h3,
 h4,
 p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-ul,
-ol {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+  margin: 0;
 }
 
 img {
   display: block;
+}
+
+.button {
+  cursor: pointer;
 }
 
 body {
@@ -52,13 +48,18 @@ body {
 }
 
 .container {
-  max-width: 1158px;
+  width: 1158px;
   padding: 0 15px;
   margin-left: 0 auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
 
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .link {
@@ -104,7 +105,7 @@ body {
 
 /* header */
 
-.page-header-container {
+.header-container {
   display: flex;
   align-items: center;
 }
@@ -117,6 +118,7 @@ body {
 .menu {
   display: flex;
   align-items: center;
+  gap: 40px;
 }
 
 .contact {
@@ -142,6 +144,8 @@ body {
 }
 
 .menu-link {
+  display: block;
+  padding: 20px 0;
   font-weight: 500;
   line-height: 1.5;
   color: var(--navy-blue);
@@ -152,16 +156,15 @@ body {
   color: var(--ocean);
 }
 
-.menu-item:not(:last-child) {
+/* .menu-item:not(:last-child) {
   margin-right: 40px;
-}
+} */
 
 .address {
   font-style: normal;
   display: flex;
   margin-left: auto;
 }
-.contact-list,
 .contact-list {
   font-weight: 400;
   line-height: 1.5;
@@ -202,6 +205,7 @@ body {
 
 .hero-button {
   min-width: 160px;
+  min-height: 56px;
   padding: 16px 32px;
   border-radius: 4px;
 
@@ -212,7 +216,7 @@ body {
   letter-spacing: 0.04em;
   color: var(--white);
   background-color: var(--iris);
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .hero-button:hover,
@@ -229,6 +233,8 @@ body {
 }
 
 .advantage-title {
+  display: flex;
+
   padding-top: 120px;
   font-family: var(--font-primary);
   font-weight: 500;
@@ -261,8 +267,7 @@ body {
 /* our team */
 
 .section-bg {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 120px 0;
   text-align: center;
 
   background-color: var(--cloud);
@@ -324,7 +329,7 @@ body {
   letter-spacing: 0.04em;
   color: var(--iris);
   background-color: var(--cloud);
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .portfolio-button:hover,
